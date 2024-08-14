@@ -1,0 +1,58 @@
+---
+title: "1.3 R projects and file management"
+format: html
+---
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="slides/03-projects.html"></iframe>
+```
+
+</div>
+
+Open the slides in a new tab [here](slides/03-projects.qmd){target="_blank"}.
+
+## Exercises
+
+1.  Download the `.R` script [here](https://raw.githubusercontent.com/louisahsmith/epi590r-in-class/757acd5d2a9507e8eec1eb365c0cc1a16233f1d8/R/clean-data-bad.R) and the `.csv` file [here](https://raw.githubusercontent.com/louisahsmith/epi590r-in-class/757acd5d2a9507e8eec1eb365c0cc1a16233f1d8/data/raw/nlsy.csv).
+
+2.  In your computer file browser, find your `epi590r-in-class` repo and create an `R` folder and a `data` folder. Within the `data` folder add a `raw` folder and a `clean` folder. Put the `.csv` file in the `data/raw` folder and the script in `R` folder. Your file structure should look like this:
+
+    ```         
+    epi590r-in-class/
+    ├─ epi590r-in-class.Rproj
+    ├─ README.md
+    ├─ R/
+    │   └─ clean-data-bad.R
+    ├─ data/
+    │   ├─ raw/
+    │   │  └─ nlsy.csv
+    │   └─ clean/
+    ```
+
+3.  Return to RStudio. Look to the filepane to confirm the files are there.
+
+4.  Look at your Git pane. What do you notice? Stage, commit, and push the changes you've made.
+
+5.  Try to run the code, line-by-line, in `clean-data-bad.R`. What do you notice?
+
+6.  Go to Tools \> Global Options and under General, change your settings so that they match these:
+
+    ![](images/Screenshot%202023-08-10%20at%205.14.32%20PM.png){width="315"}
+
+7.  Close RStudio. Open it up again by opening the `epi590r-in-class.Rproj` file in your file browser. You should have a clean environment!
+
+    ::: panel-tabset
+    ## Mac
+
+    ![](images/Screenshot%202023-08-10%20at%206.22.10%20PM.png){width="500"}
+
+    ## Windows
+
+    ![](images/Screenshot%202023-08-10%20at%206.28.46%20PM.png){width="500"}
+    :::
+
+## Resources
+
+-   Jenny Bryan's blog post: [Project-oriented workflow](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)

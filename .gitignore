@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/.quarto/
+
+*.icloud
+*.DS_Store
+
+* [1-9].*
+* 1[0-9].*

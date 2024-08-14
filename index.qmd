@@ -1,0 +1,32 @@
+---
+title: "EPI 590R"
+sidebar: false
+format: 
+  html: 
+    toc: false
+about:
+  template: broadside
+image: img/lots-of-screens.png
+---
+
+
+:::: columns
+::: {.column width="50%"}
+### August 19-20, 2024 {style=margin-top:0;}
+#### 9 am - 12:30 pm; 1:30 pm - 5 pm
+#### R. Randall Rollins Building RL20
+
+
+:::
+
+::: {.column width="50%"}
+**Louisa Smith**
+
+Assistant Professor
+
+Department of Health Sciences, Northeastern University
+
+l.smith\@northeastern.edu
+:::
+
+::::

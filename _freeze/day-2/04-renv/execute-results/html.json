@@ -1,0 +1,17 @@
+{
+  "hash": "05897aa281fc8f0cda62ccabd2e26c19",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"2.4 `{renv}`\"\nformat: html\n---\n\n\nOpen the slides in a new tab [here](slides/04-renv.qmd){target=\"_blank\"}.\n\n<div>\n\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"slides/04-renv.html\"></iframe>\n```\n\n\n</div>\n\n## Exercises\n\n1. Install `{renv}`, then initialize  in your in-class R project with `renv::init()`\n\n2. Find and open the `renv.lock` file to look at the packages that are included.\n\n3.  Install a new R package of your choice. (Not sure what to choose? Try one of [these fun packages](https://medium.com/geekculture/15-fun-r-packages-you-may-not-know-of-fb25a9dcd627). For example, I did `install.packages(\"hadley/emo\")`.)\n\n4.  Create an R script and save it in your R project. Include some code that requires the package. For example:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nemo::ji(\"banana\")\n```\n:::\n\n\n4.  Run `renv::status()` to make sure your project picked up the package as a dependency.\n\n5.  Run `renv::snapshot()` to record that package in your lockfile.\n\n6.  Open your lockfile and look for your new package. For example, mine now has:\n\n```         \n\"emo\": {\n      \"Package\": \"emo\",\n      \"Version\": \"0.0.0.9000\",\n      \"Source\": \"git\",\n      \"RemoteType\": \"git\",\n      \"RemoteUrl\": \"https://github.com/hadley/emo\",\n      \"RemoteHost\": \"api.github.com\",\n      \"RemoteUsername\": \"hadley\",\n      \"RemoteRepo\": \"emo\",\n      \"RemoteRef\": \"master\",\n      \"RemoteSha\": \"3f03b11491ce3d6fc5601e210927eff73bf8e350\",\n      \"Requirements\": [\n        \"R\",\n        \"assertthat\",\n        \"crayon\",\n        \"glue\",\n        \"lubridate\",\n        \"magrittr\",\n        \"purrr\",\n        \"rlang\",\n        \"stringr\",\n        \"utils\"\n      ],\n      \"Hash\": \"eb32b8f0bb50621ad498f5d836b546a4\"\n    },\n```\n\n7. Commit and push. Now anyone can recreate the state of your packages at this moment!\n\n## Resources\n\n-   [Official `{renv}` documentation](https://rstudio.github.io/renv/)\n-   [`{renv}` GitHub repository](https://github.com/rstudio/renv)",
+    "supporting": [
+      "04-renv_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
