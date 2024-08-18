@@ -13,7 +13,7 @@ image: img/lots-of-screens.png
 :::: columns
 ::: {.column width="50%"}
 ### August 19-20, 2024 {style=margin-top:0;}
-#### 9 am - 12:30 pm; 1:30 pm - 5 pm
+#### 9 am - 12:30 pm; <br> 1:30 pm - 5 pm
 #### R. Randall Rollins Building RL20
 
 

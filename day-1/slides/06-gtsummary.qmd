@@ -162,7 +162,7 @@ We saw `include =`, `by =`, `label =`, `missing_text =` in the example
 
 ## Exercises
 
-1. Download the script with some examples and save in your in-class project directory. 
+1. Open the script with some examples. 
 
 2. Install `{gtsummary}` and run the examples.
 

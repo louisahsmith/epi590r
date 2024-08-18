@@ -187,7 +187,7 @@ tidy(logistic_model, conf.int = TRUE, exponentiate = TRUE) |>
 
 ## Exercises
 
-1. Download a new script with these examples.
+1. Open the script with these examples.
 2. Run it.
 3. Teach yourself to use `broom::tidy()` to extract the results of the Poisson regression with robust standard errors and combine them with the results of the log-binomial regression.
 4. Start creating some tables for your final project!

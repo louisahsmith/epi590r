@@ -153,7 +153,7 @@ tbl_merge(list(tbl_no_int, tbl_int),
 
 ## Exercises
 
-1. Download the script with some examples and save in your in-class project directory. 
+1. Open the script with some examples. 
 
 2. Run the examples.
 

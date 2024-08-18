@@ -19,7 +19,7 @@ Open the slides in a new tab [here](slides/07-regression.qmd){target="_blank"}.
 
 # Exercises
 
-1.  Download the R script [here](https://raw.githubusercontent.com/louisahsmith/epi590r-in-class/32b2ee1fbbff1b219917fb3ba5e440de333a060a/R/regression-examples.R) and put it into your in-class project folder.
+1.  Open the R script `regression-examples.R` from your in-class project folder.
 2.  Run the examples.
 3.  Each of the univariate regression examples held the outcome (`y =`) constant, while varying the predictor variables with `include =`. You can also look at one predictor across several outcomes. Create a univariate regression table looking at the association between sex (`sex_cat`) as the `x =` variable and each of `nsibs`, `sleep_wkdy`, and `sleep_wknd`, and `income`.
 4.  Fit a Poisson regression (`family = poisson()`) for the number of siblings, using at least 3 predictors of your choice. Create a nice table displaying your Poisson regression and its exponentiated coefficients.

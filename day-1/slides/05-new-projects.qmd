@@ -16,7 +16,7 @@ Your goal will be to create an analysis that
 We'll start this in class!
 
 :::aside
-The final project will be due August 29. More info to come!
+The final project will be due September 4 More info to come!
 :::
 
 ## New projects
@@ -67,7 +67,7 @@ We cloned our first project from GitHub; now we are going to start a new project
 
 5.  Choose a name (preferably one that matches the name you gave your R project). 
 - You can choose to make it private, if you wish
-  - Private repos have some fewer features *unless* you have GitHub Pro (which you can get for free as a student with the [GitHub student developer pack](https://education.github.com/pack)!)
+  - Private repos have  fewer features *unless* you have GitHub Pro (which you can get for free as a student with the [GitHub student developer pack](https://education.github.com/pack)!)
 - You don't need to click anything else
 
 ## Connect the local to the remote
@@ -98,7 +98,7 @@ A `.gitignore` is a special text file that tells Git not to track certain files
 ## `.gitignore` exercises
 
 8.  Create a new file called `secrets.txt` within this new repo
-- Write down your deepest, darkest secrets and save
+- Write down your deepest, darkest secrets and save (e.g., I am scared of spiders)
 
 9.  Open `.gitignore` via the RStudio filepane
 - Add "secrets.txt" below the files that RStudio helpfully ignored for you
@@ -122,7 +122,7 @@ Some fun options for data are:
 
 ## Exercises
 
-Get started making a new project and GitHub repo for your final project and finding some fun data
+Get started making a new project and GitHub repo for your final project, editing the `.gitignore` file, and finding some fun data
 
 You can always change anything you want later, and even delete the whole thing and start fresh!
 

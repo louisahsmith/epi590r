@@ -151,7 +151,7 @@ epi590r-in-class/
 
 7.  Close RStudio, then open it up again by opening the `epi590r-in-class.Rproj` file in your file browser
 
-##
+## Exercise: work with files in your R project
 
 ```{r}
 #| echo: false

@@ -27,11 +27,11 @@ Goal: Learn some best practices to make your life in R easier and your research 
 
 ## About this class
 
--   Everything you need is at <http://epi590r-2023.louisahsmith.com>
+-   Everything you need is at <http://epi590r.louisahsmith.com>
     -   Canvas will link you there, but good to bookmark as well
     -   The website will be up indefinitely
 -   General format:
-    -   Some overview slides
+    -   Some slides (introduce new content and overview of exercises)
     -   I'll demonstrate while you watch
     -   Practice on your own/with your classmates
 
@@ -49,7 +49,7 @@ Goal: Learn some best practices to make your life in R easier and your research 
 ::: {.column width="45%"}
 -   Assistant professor at Northeastern University
     -   Department of Health Sciences and the Roux Institute (Portland, Maine)
--   Started using R during my master's (so almost 9 years of experience)
+-   Started using R during my master's (so just about 10 years of experience)
     -   I learned mostly by doing!
     -   Twitter, blogs, RStudio::conf videos, meetups
 -   Basically everything I do is in R!
@@ -61,7 +61,7 @@ Goal: Learn some best practices to make your life in R easier and your research 
 :::
 :::
 
-## Most important thing about me
+## About Ollie
 
 ![](images/IMG_2433.jpeg)
 
@@ -99,7 +99,7 @@ Goal: Learn some best practices to make your life in R easier and your research 
 
 No one and no field is immune from errors in data analysis. Our goal is to make them as unlikely as possible (and report them when we find them!)
 
-## But also!
+## Not only improves science but also your life!
 
 -   It's really boring to copy lots of numbers into a table
     -   And then change a tiny thing in the analysis and do it all over again
@@ -132,14 +132,6 @@ No one and no field is immune from errors in data analysis. Our goal is to make 
 
 <!-- -->
 
-2.  Introduce yourself to git:
-
-    | `usethis::use_git_config(user.name = "Louisa Smith", user.email = "louisahsmith@gmail.com")`
-
-When you make changes to your code, they will be associated with this name and email address (this doesn't really matter for our purposes)
-
--   You only need to do this once
-
 ## Installing packages
 
 If you just updated R to a new "major" version, you will need to reinstall packages
@@ -155,7 +147,7 @@ Spelling the package or function's name wrong, or not installing or loading the 
 
 ![](images/Screenshot%202023-08-13%20at%205.46.55%20PM.png)
 
-## Using packages
+## Using packages: `library` vs. `::`
 
 ::: columns
 ::: {.column width="50%"}
@@ -163,7 +155,8 @@ If you are writing a script you will save, and will use several functions from t
 
 ``` r
 library(usethis)
-use_git_config(user.name = "Louisa Smith", user.email = "louisahsmith@gmail.com"
+use_git_config(user.name = "Louisa Smith",
+               user.email = "louisahsmith@gmail.com"
 ```
 :::
 
@@ -178,13 +171,25 @@ usethis::use_git_config(user.name = "Louisa Smith", user.email = "louisahsmith@g
 
 I try to only run `library(package)` from a script (not the console) so that there's a "record" of me loading the package, or else I might accidentally write code that doesn't work later
 
+## Set up git
+
+2.  Introduce yourself:
+
+    | `usethis::use_git_config(user.name = "Louisa Smith", user.email = "louisahsmith@gmail.com")`
+
+When you make changes to your code, they will be associated with this name and email address (this doesn't really matter for our purposes)
+
+-   You only need to do this once
+- We'll explain all this in a little bit!
+
 ## 
 
-Since I don't need to run this once, I would probably run this from the console (bottom) rather than a script (top)
+Since I only need to run this once, I would probably run this from the console (bottom) rather than a script (top)
 
 ![](images/Screenshot%202023-08-12%20at%201.03.11%20PM.png)
 
 Running from the console is great for `install.packages()`, quick calculations, fiddling with code until you get it right, or scenarios like this -- otherwise save your code in a script!
+
 
 ## Connect to GitHub
 
@@ -200,11 +205,15 @@ Instead of entering your password every time, this is a secure way to connect to
 
 4.  Copy the token
 
-5.  Back in R, run this code and paste your token where it says "Enter password":
+5.  Back in R, run this code and paste your token in the console where it says "Enter password":
 
     | `gitcreds::gitcreds_set()`
 
 You can do this again whenever your token expires or you are using a different device
+
+::: aside
+If it tells you that you already have credentials, you can either abort or replace
+:::
 
 ## Exercises
 

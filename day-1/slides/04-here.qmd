@@ -47,7 +47,7 @@ dat <- read_csv(here::here("data/raw/data.csv"))
 
 -   Construct file paths with reference to the top directory holding your `.Rproj` file.
 
--   `here::here("data", "raw", "data.csv")` for me, here, becomes `"/Users/l.smith/Documents/Teaching/Emory/epi590r-2023/data/raw/data.csv"`
+-   `here::here("data", "raw", "data.csv")` for me, here, becomes `"/Users/l.smith/Documents/Teaching/Emory/epi590r-2024/data/raw/data.csv"`
 
     -   If I change my working directory to somewhere else within my project, it will still give me that path
 
