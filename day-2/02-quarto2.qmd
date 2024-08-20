@@ -15,10 +15,24 @@ Open the slides in a new tab [here](slides/02-quarto2.qmd){target="_blank"}.
 
 ## Exercises
 
-1. Download [this quarto document](slides/_gtsummary_quarto.qmd) with some `{gtsummary}` tables from yesterday
-2. There's an error in the code! Try to render it. Play around with `eval:` and `error:` chunk and document options to help you a) find the error and b) render the document despite the error. Then fix the error. 
-3. I don't like seeing the output from the first chunk, where the passages are loaded. Make it so that we don't see this chunk's code or output.
-4. Play around with [themes](https://quarto.org/docs/output-formats/html-themes.html)!
+1. Download [this quarto document](slides/_gtsummary_quarto.qmd) with some `{gtsummary}` tables from yesterday.
+2. Render the document and examine it. For this first set of exercises, don't make any changes to the *code*, only the *options*.
+2. I don't like seeing the output from the first chunk, where the packages are loaded. Use an option that makes it so that we don't see this chunk's output.
+3. Let's not print the code from creating the tables. Using an option *for the whole document*, make it so that we don't see the code from any of the chunks.
+3. Play around with [themes](https://quarto.org/docs/output-formats/html-themes.html)!
+
+## Exercises part 2
+
+4. Create an new chunk and paste in this code:
+```
+tbl_summary(
+  NLSY,
+  by = sex_cat,
+  include = c(sex_cat, race_eth_cat, region_cat,
+              eyesight_cat, glasses, age_bir))
+```
+Try to render it. There's an error in the code! Play around with `eval:` and `error:` chunk and document options to help you b) render the document despite the error and b) find the error. Then fix the error and re-render. 
+5. Add some text about the data (you can copy and paste from the website) to the document above the code chunks.
 
 ## Resources
 

@@ -101,6 +101,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../day-1/01-intro.html"> 
 <span class="menu-text">Course content</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../final.html"> 
+<span class="menu-text">Final project</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -196,6 +200,54 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../day-1/slides/day-1-slides.pdf" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Day 1 slides pdf</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/01-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Reports and manuscripts with Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/02-quarto2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Quarto options</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/03-quarto3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Quarto tables, figures, and stats</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/05-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/06-functions2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/07-functions3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/07-renv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bonus? <code>{renv}</code></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/slides/day-2-slides.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 2 slides pdf</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -386,7 +438,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/epi590r\.louisahsmith\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

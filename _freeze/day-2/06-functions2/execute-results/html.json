@@ -1,0 +1,15 @@
+{
+  "hash": "879533531872be4ee31b67901962536e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"2.4 Functions\"\nformat: html\n---\n\n\nOpen the slides in a new tab [here](slides/06-functions2.qmd){target=\"_blank\"}.\n\n<div>\n\n\n```{=html}\n<iframe class=\"slide-deck\" src=\"slides/06-functions2.html\"></iframe>\n```\n\n\n</div>\n\n## Exercises\n\n1. Write a function to raise to any power. You don't just want to square numbers, you want to raise them to higher powers too. Make a function that uses two arguments, `x` for a number, and `power` for the power. Call it `raise()`.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nraise <- function() {\n  \n}\n\n# test with\nraise(x = 2, power = 4)\n# should give you\n2^4\n```\n:::\n\n\n2. Change your `raise()` function to default to squaring `x` when the user doesn't enter a value for `power`.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# test\nraise(x = 5)\n# should give you\n5^2\n```\n:::\n\n\n## Resources\n\n-   [Advanced R](https://adv-r.hadley.nz/functions.html)",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

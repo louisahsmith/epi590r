@@ -1,5 +1,5 @@
 ---
-title: "2.5 Functions"
+title: "2.3 Functions"
 format: html
 ---
 
@@ -31,28 +31,6 @@ square(53)
 53^2 # does this match?
 ```
 
-2. Raise to any power. You don't just want to square numbers, you want to raise them to higher powers too. Make a function that uses two arguments, `x` for a number, and `power` for the power. Call it `raise()`.
-
-```{r, eval = FALSE}
-raise <- function() {
-  
-}
-
-# test with
-raise(x = 2, power = 4)
-# should give you
-2^4
-```
-
-3. Change your `raise()` function to default to squaring `x` when the user doesn't enter a value for `power`.
-
-```{r, eval = FALSE}
-# test
-raise(x = 5)
-# should give you
-5^2
-```
-
 ## Resources
 
--   [Advanced R](-	https://adv-r.hadley.nz/functions.html)
+-   [Advanced R](https://adv-r.hadley.nz/functions.html)

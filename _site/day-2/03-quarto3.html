@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../day-2/05-functions.html" rel="next">
+<link href="../day-2/02-quarto2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,6 +101,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../day-1/01-intro.html"> 
 <span class="menu-text">Course content</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../final.html"> 
+<span class="menu-text">Final project</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -124,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">2.3 Quarto tables, figures, and stats</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../day-2/03-quarto3.html">2.3 Quarto tables, figures, and stats</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -198,6 +204,54 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../day-2/01-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Reports and manuscripts with Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/02-quarto2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Quarto options</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/03-quarto3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.3 Quarto tables, figures, and stats</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/05-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/06-functions2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/07-functions3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/07-renv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bonus? <code>{renv}</code></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/slides/day-2-slides.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 2 slides pdf</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Resources</span></a>
   </div>
@@ -213,6 +267,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#exercises-part-2" id="toc-exercises-part-2" class="nav-link" data-scroll-target="#exercises-part-2">Exercises part 2</a></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
 </nav>
@@ -245,25 +300,28 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<p>Return to the quarto document with the tables.</p>
+<p>Return to your quarto document with the tables.</p>
 <ol type="1">
 <li>Choose a table to label and caption, and then write a sentence that <em>cross-references</em> it (e.g., Table 1 shows the descriptive statistics)</li>
-<li>From that table, choose at least two statistics to pull out of the table and include in the text using <code>inline_text()</code>.</li>
-<li>Add another statistic to the text that you calculate yourself using the <code>nlsy</code> data, e.g., the mean number of hours of sleep on weekends.</li>
-<li>Render the document! Make sure it renders, and then commit and push.</li>
+<li>Add a chunk where you calculate the mean number of hours of sleep on weekends (you can use the <code>mean()</code> function). Have the code print that output.</li>
+<li>Now, store that value as an object in the chunk. Add it as inline text.</li>
+<li>Finally, calculate the statistic directly as inline text.</li>
+<li>Change the means to medians and re-render.</li>
 </ol>
-<p>Use <a href="slides/_table_test.qmd">this document</a> as a test to see if table captions work.</p>
+</section>
+<section id="exercises-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercises-part-2">Exercises part 2</h2>
+<ol start="6" type="1">
+<li>Add a chunk with the <code>table1</code> table from the slides. Practice extracting the output using <code>inline_text()</code> as in the slides.</li>
+<li>Edit or create a new table that has the median hours of sleep on weekends in it (in the overall sample).</li>
+<li>From that table, pull out the that value and include in the text using <code>inline_text()</code>.</li>
+</ol>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
-<li>The <a href="https://quarto.org/docs/guide/">quarto website</a> is an amazing resource</li>
-<li>Feel free to look at the <a href="https://github.com/louisahsmith/epi590r-2023">source code</a> of this site</li>
-</ul>
-<p>Additional resources for R Markdown will have a lot of overlap:</p>
-<ul>
-<li><a href="https://bookdown.org/yihui/rmarkdown/">The Definitive Guide to R Markdown</a></li>
-<li><a href="https://bookdown.org/yihui/rmarkdown-cookbook/">The R Markdown Cookbook</a></li>
+<li><a href="https://quarto.org/docs/authoring/cross-references.html">Cross references</a></li>
+<li><a href="https://www.danieldsjoberg.com/gtsummary/articles/inline_text.html">Inline text vignette</a></li>
 </ul>
 
 
@@ -351,7 +409,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/epi590r\.louisahsmith\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -679,6 +737,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../day-2/02-quarto2.html" class="pagination-link" aria-label="2.2 Quarto options">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2.2 Quarto options</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../day-2/05-functions.html" class="pagination-link" aria-label="2.3 Functions">
+        <span class="nav-page-text">2.3 Functions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

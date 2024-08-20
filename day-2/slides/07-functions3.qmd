@@ -1,0 +1,65 @@
+---
+title: "Functions, continued"
+format: revealjs
+execute: 
+  eval: true
+  echo: true
+---
+
+
+## Writing functions to reduce copy and paste
+
+If you find yourself doing something over and over, you can probably write a function for it.
+
+One is example is the regression tables we created yesterday.
+
+## Let's imagine we are fitting multiple similar models
+```r
+logistic_model <- glm(glasses ~ eyesight_cat + sex_cat + income,
+  data = nlsy, family = binomial()
+)
+poisson_model <- glm(nsibs ~ eyesight_cat + sex_cat + income,
+  data = nlsy, family = poisson()
+)
+logbinomial_model <- glm(glasses ~ eyesight_cat + sex_cat + income,
+  data = nlsy, family = binomial(link = "log")
+)
+```
+
+## We have a model for a table we want to create
+
+```r
+tbl_regression(
+  poisson_model,
+  exponentiate = TRUE,
+  label = list(
+    sex_cat ~ "Sex",
+    eyesight_cat ~ "Eyesight",
+    income ~ "Income"
+  )
+)
+```
+Even though this is already a function, we can *wrap* it in a new function!
+
+## New table function
+
+We can refer generically to `model` and then put the model we want a table for as an argument
+```r
+new_table_function <- function(model) {
+  tbl_regression(
+    model,
+    exponentiate = TRUE,
+    label = list(
+      sex_cat ~ "Sex",
+      eyesight_cat ~ "Eyesight",
+      income ~ "Income"
+    )
+  )
+}
+```
+
+## Exercise
+
+- Copy and paste this function into your script
+- Create each of the models and run
+- Try to figure out how you could allow someone to pass the `tidy_fun` argument (from the regression exercises yesterday)

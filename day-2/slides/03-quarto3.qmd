@@ -8,6 +8,21 @@ execute:
 ## Chunks can produce figures and tables
 
 ```{r}
+#| echo: false
+library(tidyverse)
+nlsy_cols <- c("glasses", "eyesight", "sleep_wkdy", "sleep_wknd", 
+               "id", "nsibs", "samp", "race_eth", "sex", "region", 
+               "income", "res_1980", "res_2002", "age_bir")
+nlsy <- read_csv(here::here("data", "nlsy.csv"), 
+                 na = c("-1", "-2", "-3", "-4", "-5", "-998"),
+                 skip = 1, col_names = nlsy_cols) |> 
+  mutate(region_cat = factor(region, labels = c("Northeast", "North Central", "South", "West")),
+         sex_cat = factor(sex, labels = c("Male", "Female")),
+         race_eth_cat = factor(race_eth, labels = c("Hispanic", "Black", "Non-Black, Non-Hispanic")),
+         eyesight_cat = factor(eyesight, labels = c("Excellent", "Very good", "Good", "Fair", "Poor"))) 
+```
+
+```{r}
 #| echo: fenced
 #| label: tbl-one
 #| tbl-cap: "This is a great table"
@@ -38,10 +53,6 @@ gets printed as:
 
 @fig-hist contains a histogram and @tbl-one a table.
 
-::: aside
-There are currently some bugs with cross-referencing in Word docs which will be fixed in the next Quarto version
-:::
-
 ## Inline R
 
 Along with just regular text, you can also run R code *within* the text:
@@ -55,7 +66,35 @@ becomes:
 
 There were `r 3 + 4` participants
 
+## Inline R
+
+This is helpful for reporting statistics, e.g. the sample size:
+
+::: larger-code
+```
+There were `r knitr::inline_expr("nrow(nlsy)")` participants
+```
+:::
+becomes:
+
+There were `r 12686` participants
+
 ## Inline stats
+
+You can also create an object in a chunk and then reference it later in the text
+
+```{r}
+#| echo: fenced
+total_sample <- nrow(nlsy)
+```
+
+::: larger-code
+```
+There were `r knitr::inline_expr("total_sample")` participants
+```
+:::
+
+## Inline stats (aside)
 
 I often create a list of stats that I want to report in a manuscript:
 
@@ -83,18 +122,6 @@ There were `r stats$n` participants with a mean age of `r stats$mean_age`.
 
 We saw very, very briefly yesterday:
 ```{r}
-#| echo: false
-library(tidyverse)
-nlsy_cols <- c("glasses", "eyesight", "sleep_wkdy", "sleep_wknd", 
-               "id", "nsibs", "samp", "race_eth", "sex", "region", 
-               "income", "res_1980", "res_2002", "age_bir")
-nlsy <- read_csv(here::here("data", "nlsy.csv"), 
-                 na = c("-1", "-2", "-3", "-4", "-5", "-998"),
-                 skip = 1, col_names = nlsy_cols) |> 
-  mutate(region_cat = factor(region, labels = c("Northeast", "North Central", "South", "West")),
-         sex_cat = factor(sex, labels = c("Male", "Female")),
-         race_eth_cat = factor(race_eth, labels = c("Hispanic", "Black", "Non-Black, Non-Hispanic")),
-         eyesight_cat = factor(eyesight, labels = c("Excellent", "Very good", "Good", "Fair", "Poor"))) 
 library(gtsummary)
 income_table <- tbl_uvregression(
   nlsy,
@@ -129,20 +156,28 @@ table1
 
 ## I want to report some stats!
 
+The help file for `inline_text()` is helpful and tells us that we can look at `table1$table_body` to help figure out what data to extract.
+
 How about the median (IQR) age of the male participants at the birth of their first child?
 ```{r}
-inline_text(table1, variable = "age_bir", column = "Male")
+inline_text(table1, variable = "age_bir", column = "stat_1")
 ```
 
-Or the frequency and percentage of women from the South?
-```{r}
-inline_text(table1, variable = "region_cat", level = "South", column = "Female")
-```
+## Formatting
 
-And the overall stats on people who wear glasses?
+We can add sample sizes for the  overall stats on people who wear glasses using the `pattern = ` argument:
 ```{r}
 inline_text(table1, variable = "glasses", column = "stat_0",
             pattern = "{n}/{N} ({p}%)")
+```
+
+## Formatting for regression statistics
+
+Remove some details:
+```{r}
+inline_text(income_table, variable = "age_bir")
+inline_text(income_table, variable = "age_bir",
+            pattern = "{estimate} ({conf.low}, {conf.high})")
 ```
 
 ## Better yet...
@@ -151,15 +186,15 @@ We can integrate these into the text of our manuscript:
 
 ::: larger-code
 ```
-A greater proportion of female (`r knitr::inline_expr('inline_text(table1, variable = "glasses", column = "Female")')`) than male 
+A greater proportion of female (`r knitr::inline_expr('inline_text(table1, variable = "glasses", column = "stat_2")')`) than male 
 
-(`r knitr::inline_expr('inline_text(table1, variable = "glasses", column = "Male")')`) participants wore glasses.
+(`r knitr::inline_expr('inline_text(table1, variable = "glasses", column = "stat_1")')`) participants wore glasses.
 ```
 :::
 
 Which becomes:
 
-A greater proportion of female (`r inline_text(table1, variable = "glasses", column = "Female")`) than male (`r inline_text(table1, variable = "glasses", column = "Male")`) participants wore glasses.
+A greater proportion of female (`r inline_text(table1, variable = "glasses", column = "stat_2")`) than male (`r inline_text(table1, variable = "glasses", column = "stat_1")`) participants wore glasses.
 
 ## Readability
 
@@ -168,9 +203,9 @@ Because this can be hard to read, I'd suggest storing those stats in a chunk bef
 ````
 ```{{r}}
 glasses_f <- inline_text(table1, variable = "glasses", 
-                         column = "Female")
+                         column = "stat_2")
 glasses_m <- inline_text(table1, variable = "glasses", 
-                         column = "Male")
+                         column = "stat_1")
 ```
 A greater proportion of female (`r knitr::inline_expr('glasses_f')`) than male (`r knitr::inline_expr('glasses_m')`) participants wore glasses.
 ````
@@ -180,5 +215,5 @@ A greater proportion of female (`r knitr::inline_expr('glasses_f')`) than male (
 Return to the quarto document with the tables.
 
 - Choose a table to label and caption, and then write a sentence that *cross-references* it (e.g., Table 1 shows the descriptive statistics)
-- From that table, choose at least two statistics to pull out of the table and include in the text using `inline_text()`.
-- Add another statistic to the text that you calculate yourself using the `nlsy` data, e.g., the mean number of hours of sleep on weekends.
+- Edit or create a new table that has the median hours of sleep on weekends in it (in the overall sample).
+- Pull that value from a table.

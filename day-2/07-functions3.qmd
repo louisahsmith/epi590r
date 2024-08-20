@@ -1,0 +1,24 @@
+---
+title: "2.5 Functions"
+format: html
+---
+
+Open the slides in a new tab [here](slides/07-functions3.qmd){target="_blank"}.
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="slides/07-functions3.html"></iframe>
+```
+
+</div>
+
+## Exercises
+
+1. Fit the models from the slides.
+2. Using the function from the slides, create a table for each model. What types of situations would this be useful for, and when would it not?
+3. Add an argument to the function that allows someone to add robust standard errors (see the `tidy_fun = ` argument from the regression exercise solutions yesterday).
+
+## Resources
+
+-   [Advanced R](https://adv-r.hadley.nz/functions.html)

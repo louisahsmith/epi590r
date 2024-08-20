@@ -15,21 +15,21 @@ Open the slides in a new tab [here](slides/03-quarto3.qmd){target="_blank"}.
 
 ## Exercises
 
-Return to the quarto document with the tables.
+Return to your quarto document with the tables.
 
 1. Choose a table to label and caption, and then write a sentence that *cross-references* it (e.g., Table 1 shows the descriptive statistics)
-2. From that table, choose at least two statistics to pull out of the table and include in the text using `inline_text()`.
-3. Add another statistic to the text that you calculate yourself using the `nlsy` data, e.g., the mean number of hours of sleep on weekends.
-4. Render the document! Make sure it renders, and then commit and push.
+3. Add a chunk where you calculate the mean number of hours of sleep on weekends (you can use the `mean()` function). Have the code print that output.
+3. Now, store that value as an object in the chunk. Add it as inline text.
+4. Finally, calculate the statistic directly as inline text.
+5. Change the means to medians and re-render.
 
-Use [this document](slides/_table_test.qmd) as a test to see if table captions work.
+## Exercises part 2
+6. Add a chunk with the `table1` table from the slides. Practice extracting the output using `inline_text()` as in the slides.
+3. Edit or create a new table that has the median hours of sleep on weekends in it (in the overall sample).
+2. From that table, pull out the that value and include in the text using `inline_text()`.
 
 ## Resources
 
--   The [quarto website](https://quarto.org/docs/guide/) is an amazing resource
--   Feel free to look at the [source code](https://github.com/louisahsmith/epi590r-2023) of this site
+- [Cross references](https://quarto.org/docs/authoring/cross-references.html)
+-  [Inline text vignette](https://www.danieldsjoberg.com/gtsummary/articles/inline_text.html)
 
-Additional resources for R Markdown will have a lot of overlap:
-
--   [The Definitive Guide to R Markdown](https://bookdown.org/yihui/rmarkdown/)
--   [The R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)

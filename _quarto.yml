@@ -19,8 +19,8 @@ website:
         file: about.qmd
       - text: "Course content"
         file: day-1/01-intro.qmd
-      # - text: "Final project"
-      #   file: final.qmd
+      - text: "Final project"
+        file: final.qmd
     right:
       - text: "Data"
         file: data.qmd
@@ -34,9 +34,9 @@ website:
       - auto: "day-1/*"
       - text: "Day 1 slides pdf"
         file: day-1/slides/day-1-slides.pdf
-      # - auto: "day-2/*"
-      # - text: "Day 2 slides pdf"
-      #   file: day-2/slides/day-2-slides.pdf
+      - auto: "day-2/*"
+      - text: "Day 2 slides pdf"
+        file: day-2/slides/day-2-slides.pdf
       - resources.qmd
 
 format:

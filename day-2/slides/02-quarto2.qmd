@@ -64,6 +64,8 @@ format:
 
 Download the quarto document with some `{gtsummary}` tables from yesterday
 
-- There's an error in the code! Try to render it. Play around with `eval:` and `error:` chunk and document options to help you a) find the error and b) render the document despite the error. Then fix the error. 
-- I don't like the output from the first chunk, where the passages are loaded. Make it so that we don't see this chunk's code or output.
-- Play around with themes!
+- Change some options to hide code and output
+- Add another code chunk
+- Play with themes
+- Deal with errors
+- Add some text

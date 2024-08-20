@@ -19,11 +19,9 @@ execute:
 
 Only because quarto is newer and more featured!
 
--   Anything you already know how to do in R Markdown you can do in quarto, and more![^1]
+-   Anything you already know how to do in R Markdown you can do in quarto, and more!
 -   All of these slides, website, etc. are all made in quarto.
 -   If you know and love R Markdown, by all means keep using it!
-
-[^1]: Slight caveat...
 
 ## Quarto workflow
 
@@ -31,7 +29,7 @@ Only because quarto is newer and more featured!
 2.  Write code
 3.  Write text
 4.  Repeat 2-3 in whatever order you want
-5.  Render
+5.  Render repeatedly as you go
 
 ## How does it work?
 
@@ -126,7 +124,7 @@ There are a *ton* of possible options, but importantly, this determines the docu
 We're going to focus on html output
 
 -   It's easy to transition to Word ([`format: docx`](https://quarto.org/docs/reference/formats/docx.html)) but it's not as good for constant re-rendering
--   You need a LaTeX installation for pdf
+-   You need a LaTeX installation for pdf ([`format: pdf`](https://quarto.org/docs/reference/formats/pdf.html))
     -   I recommend [`{tinytex}`](https://yihui.org/tinytex/)
 
 ## Exercises

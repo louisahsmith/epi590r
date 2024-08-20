@@ -7,7 +7,7 @@ The goal of the project is to conduct a fully reproducible analysis that will be
 
 You can use any data you want as long as it is able to be shared with the teaching team. Some suggestions were given [here](day-1/05-new-projects.qmd).
 
-The final project will be graded out of 12 points, which correspond to the objectives listed below.
+The final project will be graded out of 11 points, which correspond to the objectives listed below.
 
 You will "turn in" your project by **submitting the link on** **Canvas** to your github repo by **September 4**. If it is a private repository, please invite `louisahsmith` and the TAs as collaborators so that we can access it.
 
@@ -27,10 +27,7 @@ You will "turn in" your project by **submitting the link on** **Canvas** to your
     -   Cross-references to a table and a figure at least once each (1 pt)
     -   A brief description of the data, including its source (1 pt)
 -   Use the `{here}` package every time you refer to file paths when reading in data and saving any files (1 pt)
-    -   You must use it at least once. Feel free to save any files that you create (e.g., your figure) in your code
--   Use the `{renv}` package to make sure the teaching team can reproduce your results with the same package versions (1 pt)
-    -   You don't need to include any `{renv}` code, we can see that you have used it because of the `renv.lock` file you will include
-    -   Remember if you are having trouble with `{renv}` to deactivate it, and then only initiate it when you have installed all the packages you will need
+    -   You must use it at least twice Feel free to save any files that you create (e.g., your figure) in your code
 -   Commit and push your work to GitHub as you go (1 pt)
 -   In a README file, include any notes necessary for us to easily reproduce your analysis (e.g., "Run `script.R` and then render `document.qmd`") (1 pt)
     -   We should be able to make a minor change to the underlying data, then re-run the analysis to see how the change affects the results

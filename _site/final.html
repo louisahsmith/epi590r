@@ -99,6 +99,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./day-1/01-intro.html"> 
 <span class="menu-text">Course content</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./final.html"> 
+<span class="menu-text">Final project</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -198,6 +202,54 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./day-2/01-quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.1 Reports and manuscripts with Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day-2/02-quarto2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Quarto options</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day-2/03-quarto3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Quarto tables, figures, and stats</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day-2/05-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day-2/06-functions2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day-2/07-functions3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day-2/07-renv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bonus? <code>{renv}</code></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./day-2/slides/day-2-slides.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 2 slides pdf</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Resources</span></a>
   </div>
@@ -240,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p>The goal of the project is to conduct a fully reproducible analysis that will be easy to reproduce even if the underlying data changes (say, we have to remove a row of data).</p>
 <p>You can use any data you want as long as it is able to be shared with the teaching team. Some suggestions were given <a href="./day-1/05-new-projects.html">here</a>.</p>
-<p>The final project will be graded out of 12 points, which correspond to the objectives listed below.</p>
+<p>The final project will be graded out of 11 points, which correspond to the objectives listed below.</p>
 <p>You will “turn in” your project by <strong>submitting the link on</strong> <strong>Canvas</strong> to your github repo by <strong>September 4</strong>. If it is a private repository, please invite <code>louisahsmith</code> and the TAs as collaborators so that we can access it.</p>
 <section id="specific-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="specific-objectives">Specific objectives</h2>
@@ -268,12 +320,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Use the <code>{here}</code> package every time you refer to file paths when reading in data and saving any files (1 pt)
 <ul>
-<li>You must use it at least once. Feel free to save any files that you create (e.g., your figure) in your code</li>
-</ul></li>
-<li>Use the <code>{renv}</code> package to make sure the teaching team can reproduce your results with the same package versions (1 pt)
-<ul>
-<li>You don’t need to include any <code>{renv}</code> code, we can see that you have used it because of the <code>renv.lock</code> file you will include</li>
-<li>Remember if you are having trouble with <code>{renv}</code> to deactivate it, and then only initiate it when you have installed all the packages you will need</li>
+<li>You must use it at least twice Feel free to save any files that you create (e.g., your figure) in your code</li>
 </ul></li>
 <li>Commit and push your work to GitHub as you go (1 pt)</li>
 <li>In a README file, include any notes necessary for us to easily reproduce your analysis (e.g., “Run <code>script.R</code> and then render <code>document.qmd</code>”) (1 pt)
@@ -394,7 +441,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/epi590r\.louisahsmith\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

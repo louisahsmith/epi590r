@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../day-2/02-quarto2.html" rel="next">
+<link href="../day-1/slides/day-1-slides.pdf" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -99,6 +101,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../day-1/01-intro.html"> 
 <span class="menu-text">Course content</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../final.html"> 
+<span class="menu-text">Final project</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -124,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">2.1 Reports and manuscripts with Quarto</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../day-2/01-quarto.html">2.1 Reports and manuscripts with Quarto</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -198,6 +204,54 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../day-2/01-quarto.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.1 Reports and manuscripts with Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/02-quarto2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.2 Quarto options</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/03-quarto3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Quarto tables, figures, and stats</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/05-functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.3 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/06-functions2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.4 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/07-functions3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2.5 Functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/07-renv.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bonus? <code>{renv}</code></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../day-2/slides/day-2-slides.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Day 2 slides pdf</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">R Resources</span></a>
   </div>
@@ -251,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
 <p><em>File &gt; New File &gt; Quarto Document</em></p>
 <p><img src="slides/images/Screenshot 2023-08-14 at 9.40.22 PM.png" class="img-fluid"></p></li>
 <li><p>Render it.</p></li>
-<li><p>Play around. Run each of the chunks. Toggle between the Source and Visual modes. Show the outline.</p></li>
+<li><p>Play around. Run each of the chunks. Toggle between the Source and Visual modes. Show the outline. Try different formats.</p></li>
 </ol>
 </section>
 <section id="resources" class="level2">
@@ -352,7 +406,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/epi590r\.louisahsmith\.com");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -680,6 +734,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../day-1/slides/day-1-slides.pdf" class="pagination-link" aria-label="Day 1 slides pdf">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Day 1 slides pdf</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../day-2/02-quarto2.html" class="pagination-link" aria-label="2.2 Quarto options">
+        <span class="nav-page-text">2.2 Quarto options</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
